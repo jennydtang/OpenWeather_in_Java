@@ -69,6 +69,12 @@
               />
             </p>
           </div>
+          <div>
+            <h3>Recent Searches</h3></th>
+            <span th:each="zipCode: ${zip_codes}" th:if="${zipCodeStat.index >= zipCodeStat.size-5}">
+            <p th:text="${zipCode.zipCode}"></p>
+            </span>
+            </div>
         </div>
       </div>
     </div>

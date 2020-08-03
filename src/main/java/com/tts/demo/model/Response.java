@@ -1,5 +1,6 @@
 package com.tts.demo.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Response {
     private Map<String, String> coord;
     private List<Map<String, String>> weather;
