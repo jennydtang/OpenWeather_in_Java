@@ -70,11 +70,22 @@
             </p>
           </div>
           <div>
-            <h3>Recent Searches</h3></th>
-            <span th:each="zipCode: ${zip_codes}" th:if="${zipCodeStat.index >= zipCodeStat.size-5}">
-            <p th:text="${zipCode.zipCode}"></p>
-            </span>
-            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Recent Searches</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  th:each="zipCode: ${zip_codes}"
+                  th:if="${zipCodeStat.index >= zipCodeStat.size-5}"
+                >
+                  <td th:text="${zipCode.zipCode}"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
